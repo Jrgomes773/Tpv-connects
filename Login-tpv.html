@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Tpv connects </title>
+    <title> Tpv connects - Login </title>
     <link rel="stylesheet" href="login-style.css">
-    
 </head>
+
 <body>
-    <img src="/images/tpv (1)2.png">
-    <form>
-        <label for="Email">Email:</label>
-        <input type="text" placeholder="Email" >
-        <label type="password">password</label>
-    </form>
+    <main class="login-page">
+        <section class="login-card">
+            <div class="logo-image">
+                <img src="/images/tpv (1)2 - Editado.png">
+
+            </div>
+
+            <div class="login-header">
+                <h1>Welcome back</h1>
+                <p>Enter with your account to access your </p>
+
+            </div>
+
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input type="text" placeholder="Enter your email" name="email" autocomplete="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label type="password" id="password" name="password" autocomplete="current-password"
+                        required>Password</label>
+                    <input type="password" placeholder="Enter your password ">
+                    <div class="forgot-password">
+                        <a href="#">Forgot password?</a>
+
+                    </div>
+                </div>
+
+                <div class="remember-me">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div>
+                <button type="submit" class="login-button">Login</button>
+            </form>
+
+        </section>
+
+
+    </main>
+
+
 </body>
+
 </html>
