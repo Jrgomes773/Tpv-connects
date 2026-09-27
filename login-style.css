@@ -1,91 +1,151 @@
-body{
+:root {
+    --primary-color: #0a328a;
+}
+
+body {
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.login-page{
+
+.login-page {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     padding: 20px;
+    background-color: var(--primary-color);
 }
-.logo-image{
-    /* width: 100%; */
+
+.logo-image-container {
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: 20px;
+}
 
-    
-}
-.logo-image img{
-    width: 50%;
+.logo-image-container img {
+    width: 20%;
     object-fit: cover;
+    transition: width 0.2s ease;
 }
-.login-card{
+
+.login-card {
     border: 1px solid black;
     width: 100%;
     max-width: 500px;
     padding: 40px;
     border-radius: 16px;
+    background-color: aliceblue;
+}
 
-}
-.login-header{
+.login-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
 }
-.login-form{
+
+.login-header p {
+    font-size: 14px;
+}
+
+.login-form {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
-.form-group{
+
+.form-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-.form-group label{
+
+.form-group label {
     font-weight: 600;
     font-size: 15px;
 }
-.form-group input{
+
+.form-group input {
     width: 100%;
     padding: 8px;
-    border-radius:8px;
+    border-radius: 8px;
     border: 1px solid gray;
 }
-.forgot-password{
+.form-group input:focus{
+    outline: none;
+    border: 1px solid #0585c1;
+    box-shadow: 0 0 2px 3px color-mix(in srgb, var(--primary-color) 20%, transparent);
+}
+
+.forgot-password {
     display: flex;
 }
-.forgot-password a{
+
+.forgot-password a {
     text-decoration: none;
     color: blue;
+    font-size: 14px;
 }
-.forgot-password a:hover{
+
+.forgot-password a:hover {
     text-decoration: underline;
 }
-.remember-me label:hover, .remember-me input:hover{
+
+.forgot-password a:focus{
+    outline: none;
+    text-decoration: underline;
+}
+.remember-me{
+    font-size: 14px;
+}
+
+.remember-me label:hover,
+.remember-me input:hover {
     cursor: pointer;
 }
 
-.login-button{
+.login-button {
     width: 100%;
     padding: 13px;
     font-size: 18px;
     font-weight: 600;
     border-radius: 8px;
     border: none;
-    background-color: rgb(27, 27, 185);
+    background-color: var(--primary-color);
     color: white;
-
 }
-.login-button:hover{
+
+.login-button:hover {
     cursor: pointer;
     background-color: rgb(22, 22, 150);
 }
+.login-button:focus{
+    outline: none;
+    box-shadow: 0 0 2px 3px color-mix(in srgb, var(--primary-color) 30%, transparent);
+}
 
+@media (max-width: 400px) {
+    .logo-image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .logo-image-container img{
+        width: 50%;
+        object-fit: cover;
+    }
+
+    .login-header h1 {
+        font-size: 20px;
+    }
+    .login-card{
+        padding: 25px;
+    }
+}
